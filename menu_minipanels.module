@@ -305,6 +305,9 @@ function menu_minipanels_preprocess_menu_link(&$vars) {
  * and if so, add the required assets.
  */
 function menu_minipanels_page_alter(&$page) {
+  // We completely want to bypass this because we have our own css and we don't
+  // want to load and check all those menus and menu links.
+  return;
   // Optionally ignore certain pages.
   if (menu_minipanels_excluded_path()) {
     return;
